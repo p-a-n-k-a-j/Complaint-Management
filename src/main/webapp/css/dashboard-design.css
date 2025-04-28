@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+body{
+	 font-family: "Poppins", sans-serif;
+  	 font-weight: 500;
+  	 font-style: normal;
+  	
+  	 
+}
+.greeting{
+	color:#212121;
+	padding:30px;
+	width:100%;
+}
+.greet{
+	padding:10px;
+}
+.status-card{
+	display:flex;
+	justify-content:space-around;
+}
+.card {
+  background-color: #FFFFFF; /* White background */
+  border: 1px solid #E0E0E0; /* Light grey border */
+  height: 150px;
+  width: 200px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Material elevation 1 */
+  transition: box-shadow 0.3s ease;
+
+  /* Flexbox content styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* More breathing room */
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Subtle hover effect */
+}
+
+/* Heading text inside card */
+.card-heading {
+  color: #212121;           /* Material dark text */
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Number or value inside card */
+.card-number {
+  color: #6200EE;           /* Material Deep Purple primary */
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* Icon inside card */
+.card-icon {
+  color: #424242;           /* Slightly softer than pure black */
+  width: 35px;
+  height: 35px;
+}
+
+/* recent complaint table */
+.recent-table {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.table thead {
+  background-color: #f5f5f5;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f8ff;
+  transition: background-color 0.2s ease;
+}
+
+.table th {
+  color: #333;
+  font-weight: 600;
+}
+
+.table td {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .table th, .table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+.status-pending {
+    background-color: #d3d3d3; /* gray */
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .status-inprogress {
+    background-color: #ffe066; /* yellow */
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .status-resolved {
+    background-color: #8fd694; /* green */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }

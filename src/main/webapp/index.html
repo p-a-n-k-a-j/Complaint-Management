@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<title>Complaint Management System</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+ </head>
+
+<body>
+<div class="form-wrapper">
+<div class="form-header">
+<h2> Register to Access the Complaint System</h2>
+<p>Sign up to report and track complaints easily.  </p>
+</div>
+<div class="form-fields">
+    <form id="register-form">
+        <div class="combine-group-of-field">
+            <div class="name-grouping-two">
+                <label for="fname" class="labela">Name</label>
+                <input type="text" class="name-input" id="fname" name="fname" placeholder=" " required>
+                <label class="sub-label">First Name</label>
+                
+            </div>
+            <div class="name-grouping-two">
+                <label class="labels" style="visibility: hidden">Placeholder</label>
+                <input type="text" class="name-input" id="lname" name="lname" placeholder=" " required>
+                <label class="sub-label">Last Name</label>
+                
+                
+            </div>
+        </div>
+        <!-- first name and last name error div for maintain structure -->
+         <div class="errors">
+         <div class="error-div"><span class="error-message" id="fname-error"></span></div>
+         <div class="error-div"><span class="error-message" id="lname-error"></span></div>
+         </div>
+
+        <div class="combine-group-of-field">
+            <div class="grouping-two">
+            <div class="email-input">
+                <label for="email" class="labels">Email</label>
+                <input type="email" class=" email-input" id="email" name="email" placeholder="example@gmail.com" required>
+           		<button type="button"  class="otp-btn" id="otp">Get Key</button>
+           		<img src="./images/check.png" id="check" class="otp-btn">
+           		
+           		</div>
+           		
+           		
+           		<div class="verify-input" id="verify-input">
+           		 <input type="text" class="inputs" id="verificationkey"  placeholder="Enter 6 digit" required>
+           		<button type="button"  class="verify-btn" id="verify">Verify</button>
+           		<span class="error-message" id="verify-error"></span>
+           		</div>
+            </div>
+            <div class="grouping-two">
+                <label for="phone" class="labels">Phone No.</label>
+                <input type="tel" id="phone" name="phone" class="inputs" pattern="[0-9+]+" placeholder="+91 1234567890" required>
+            	
+            </div>
+        </div>
+<!-- password error visible here for maintain structure -->
+         <div class="errors">
+         <div class="error-div"><span class="error-message" id="email-error"></span></div>
+         <div class="error-div"><span class="error-message" id="phone-error"></span></div>
+         </div>
+        <div class="combine-group-of-field">
+            <div class="grouping-two">
+                <label for="password" class="labels">Password</label>
+                <input type="password" class="inputs" id="password" name="pass" placeholder="Enter password" required>
+            </div>
+            <div class="grouping-two">
+                <label for="confirm_password" class="labels">Confirm Password</label>
+                <input type="password" class="inputs" id="confirm_password" name="cnf_pass" placeholder="Enter confirm password" required>
+           		
+            </div>
+        </div>
+<!-- password error visible here for maintain structure -->
+         <div class="pass-errors" id="pass-errors">
+         <div class="pass-div">
+         <div class="pass-configure" id="pass-config" style="display:none">
+        <div class="config" id="lower">At least one lowercase letter</div>
+		<div class="config" id="upper">At least one uppercase letter</div>
+		<div class="config" id="num"> At least one number (0-9)</div>
+		<div class="config" id="spacial">At least one special character (!@#$%^&*)</div>
+		<div class="config" id="character">Minimum 8 characters</div>
+         </div></div>
+         <div class="pass-div"><span class="error-message" id="password-error"></span></div>
+         </div>
+        <div class="combine-group-of-field">
+            <div class="grouping-two">
+                <label for="role" class="labels">Role</label>
+                <select id="role" name="role" class="inputs" required>
+                    <option value="" >Choose a role</option>
+                    <option value="student">Student</option>
+                    <option value="staff">Staff</option>
+                </select>
+                
+            </div>
+
+            <div class="grouping-two" id="role-specific-field" style="display:none;">
+                <label for="dept" id="dept-label" class="labels"></label>
+                <select id="dept" name="dept" class="inputs" required>
+                    <option value="CSE">CSE</option>
+                    <option value="CE">CE</option>
+                    <option value="ME">ME</option>
+                    <option value="EE">EE</option>
+                </select>
+                
+            </div>
+        </div>
+
+        <div class="combine-group-of-field">
+            <div class="grouping-two">
+                <button type="submit" class="submit btn" id="btn">Submit</button>
+            </div>
+            <div class="grouping-two">
+                <button type="reset" class="reset btn">Reset</button>
+            </div>
+             
+        </div>
+         <p class="shift-to-login">Already have an account? <a href="login.html">Click here</a>.</p>
+
+    </form>
+</div>
+
+
+</div>
+<script src="./js/index.js"></script>
+</body>
+</html>

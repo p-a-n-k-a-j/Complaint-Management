@@ -1,0 +1,327 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+body{
+	 font-family: "Poppins", sans-serif;
+  	 font-weight: 500;
+  	 font-style: normal;
+  	 background:#b0b0b0;
+  	 display:flex;
+  	 justify-content:center;
+  	 align-items:center;
+  	 
+}
+/*form section start here */
+.form-wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    padding: 0px;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures content does not overflow */
+}
+
+
+
+/* this is form header code started here */
+.form-header {
+    background-image: url("../images/img1.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(245, 245, 245, 0.8));
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 250px; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-header h2{
+	color:#FFFFFF;
+	font-size:19px;
+	font-weight:700;
+	letter-spacing:3px;
+}
+.form-header p{
+	color:rgba(245, 245, 245, 0.7);
+	font-size:15px;
+	font-weight:500;
+	letter-spacing:1px;
+	
+	
+}
+
+/* this is form header code ended here */
+
+/* starting form controls handling all input fields and buttons */
+
+.form-fields {
+    flex: 1; /* Takes the remaining space */
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: auto; /* Adds scroll bar if content overflows */
+}
+
+/* first name and last name error field design start */
+.errors{
+	 height: 20px; /* Allow dynamic height */
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    margin-top:-15px;
+    margin-bottom:-20px;
+    flex-direction: row;
+    
+    gap: 20px; 
+    align-items: center; /* Align items properly */
+}
+
+.error-div{
+	width:250px;
+	font-size:16px;
+}
+
+
+.pass-errors{
+	height: 20px; /* Allow dynamic height */
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    margin-top:-15px;
+    margin-bottom:-20px;
+    flex-direction: row;
+    
+    gap: 20px; 
+    align-items: center; /* Align items properly */
+}
+.pass-div{
+	width:250px;
+	font-size:16px;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.config{
+	font-size:10px;
+	width:100%;
+	
+}
+/* first name and last name error field design end */
+
+
+
+.combine-group-of-field {
+    height: auto; /* Allow dynamic height */
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    align-items: center; /* Align items properly */
+}
+.name-grouping-two{
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+.name-input{
+	padding: 10px;
+    width: 250px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    position: relative;
+    outline:none;
+}
+.sub-label {
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    color: #757575;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    background-color: #FFFFFF; /* Match input background */
+    padding: 0 5px; /* Prevent label from cutting at border */
+}
+.name-input:focus + .sub-label,
+.name-input:not(:placeholder-shown) + .sub-label {
+   	left: 10px;
+    top: 40%;
+    transform: translateY(-40%);
+    font-size: 10px;
+    color:#fff;
+    letter-spacing: 1px;
+    border-radius:5px;
+    border:1px solid #BDBDBD;
+    background:#333;
+    
+}
+
+
+/* other field styling */
+.grouping-two{	
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	max-width: 280px;
+}
+.labels{
+	color:#212121;
+}
+
+.grouping-two .inputs{
+	height: 45px;
+	padding:10px;
+	width:250px;
+	border-radius:12px;
+	border: 1px solid #BDBDBD;
+}
+/* this focus for all input field */
+input:focus{
+	border-color: #ccc;
+    outline: none; /* Removes default blue outline */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.email-input {
+  position: relative;
+  width: 250px;
+}
+
+
+
+.email-input input {
+	border:1px solid #ccc;
+	outline:none;
+	
+  width: 100%;
+ padding-right:90px;/* space for the button inside */
+  height: 45px;
+  border-radius: 12px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.otp-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 12px;
+  font-size: 13px;
+  background-color: #858585;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 1;
+}
+.otp-btn:hover{
+	background:#333;
+}
+
+
+.verify-input{
+	display:none;
+	position:relative;
+	width:100%;
+}
+.verify-input input{
+	padding-left:10px;
+	padding-right:90px;
+	height:45px;
+	border-radius:12px;
+	
+}
+.verify-btn{
+	position:absolute;
+	top:50%;
+	right:10px;
+	transform:translateY(-90%);
+	padding: 6px 12px;
+  font-size: 13px;
+  background-color: #858585;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 1;
+	
+}
+.verify-btn:hover{
+	background:#333;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+    padding-left: 5px;
+    display: block;
+}
+select{
+	cursor: pointer;
+}
+
+.btn{
+	background-color: #858585; /* Primary color */
+    color: white;
+    border: none;
+    width:250px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{	
+    background-color: #333; /* Darker shade */
+    animation: bounce 0.5s ease;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* here Form controls section ended */
+
+/*form section ended here */
+
+.shift-to-login{
+	padding:10px;
+	width:100%;
+}
+.shift-to-login a{
+	text-decoration:none;
+	padding:10px;
+	padding-left:10px;
+	transition:background 0.2s ease-in-out;
+	border-radius:4px;
+}
+.shift-to-login a:hover{
+	text-decoration:underline;
+	color:#333;
+}
